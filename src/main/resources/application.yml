@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: crocante-backend
+
+# Registro de eventos (logs): nivel INFO en general y DEBUG solo para nuestro código.
+logging:
+  level:
+    root: INFO
+    cl.ipsb.crocante: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
