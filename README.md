@@ -51,6 +51,16 @@ Categorías cargadas por Flyway: 1 Papas fritas, 2 Empanadas, 3 Sopaipillas, 4 B
 
 El frontend Angular está en la carpeta hermana `crocante-frontend` y se conecta a este backend por el puerto 8080 (ver su README).
 
+## Logs y Javadoc
+
+**Logs.** Cada clase declara su *logger* con SLF4J (`private static final Logger log = LoggerFactory.getLogger(...)`) y registra el inicio y el fin de cada proceso con el formato `--- inicio guardar producto - nombre: {} ---` / `--- fin ... ---`. El nivel se configura en la sección `logging` de `application.yml`: INFO en general y DEBUG para `cl.ipsb.crocante` y para el SQL de Hibernate (`org.hibernate.SQL`). No se registran datos sensibles.
+
+**Javadoc.** Cada clase lleva una cabecera con descripción y las etiquetas `@author cbarrale`, `@version 1.0.0` y `@since 1.0.0`; los métodos públicos documentan `@param` y `@return`. Para generar el sitio de documentación:
+
+```bash
+./mvnw javadoc:javadoc    # resultado en target/reports/apidocs/index.html
+```
+
 ## Pruebas automáticas
 
 ```bash
