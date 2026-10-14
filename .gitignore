@@ -6,3 +6,10 @@ node_modules/
 *.log
 hs_err_pid*
 replay_pid*
+
+# Eclipse (los genera el IDE al importar el proyecto)
+.project
+.classpath
+.settings/
+.factorypath
+bin/
