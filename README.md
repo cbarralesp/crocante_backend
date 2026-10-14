@@ -1,4 +1,4 @@
-# crocante-backend
+# crocante_backend
 
 API del sistema de venta de comida rápida Crocante (Spring Boot 3.5, Java 21, PostgreSQL). Se construye por pasos durante las clases; cada paso es un commit con su tag.
 
@@ -49,7 +49,7 @@ Categorías cargadas por Flyway: 1 Papas fritas, 2 Empanadas, 3 Sopaipillas, 4 B
 
 ## 4. Frontend
 
-El frontend Angular está en la carpeta hermana `crocante-frontend` y se conecta a este backend por el puerto 8080 (ver su README).
+El frontend Angular está en su propio repositorio, https://github.com/cbarralesp/crocante_frontend, y se conecta a este backend por el puerto 8080 (ver su README).
 
 ## Logs y Javadoc
 
