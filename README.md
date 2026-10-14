@@ -9,6 +9,7 @@ API del sistema de venta de comida rápida Crocante (Spring Boot 3.5, Java 21, P
 | `paso-02` | Conexión a PostgreSQL y migraciones Flyway (tablas `categorias` y `productos`) |
 | `paso-03` | Entidad `Producto` y `ProductoRepository` |
 | `paso-04` | `ProductoController`: guardar y listar productos |
+| `paso-05` | `CategoriaController`: listar categorías (lo usa el frontend Angular) |
 
 ```bash
 git checkout paso-02     # ver el proyecto en ese punto
@@ -44,7 +45,11 @@ En Eclipse: *File → Import → Maven → Existing Maven Projects* y luego *Run
 3. **Execute**. Debe responder `201` con el producto y su `id`.
 4. Probar `GET /api/productos` para ver lo guardado, o con `categoriaId=2` para filtrar.
 
-Categorías cargadas por Flyway: 1 Papas fritas, 2 Empanadas, 3 Sopaipillas, 4 Bebidas, 5 Salsas.
+Categorías cargadas por Flyway: 1 Papas fritas, 2 Empanadas, 3 Sopaipillas, 4 Bebidas, 5 Salsas (también con `GET /api/categorias`).
+
+## 4. Frontend
+
+El frontend Angular está en la carpeta hermana `crocante-frontend` y se conecta a este backend por el puerto 8080 (ver su README).
 
 ## Pruebas automáticas
 
@@ -52,7 +57,7 @@ Categorías cargadas por Flyway: 1 Papas fritas, 2 Empanadas, 3 Sopaipillas, 4 B
 ./mvnw test
 ```
 
-Usan H2 en modo PostgreSQL, así que no necesitan PostgreSQL instalado (12 pruebas).
+Usan H2 en modo PostgreSQL, así que no necesitan PostgreSQL instalado (13 pruebas).
 
 ## Avisos
 
